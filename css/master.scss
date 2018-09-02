@@ -1,0 +1,138 @@
+/*! github.com/jojomimosa | MIT License */
+
+$font-stack: 'Arimo', sans-serif;
+$font-stack-secondary: 'Comfortaa', sans-serif;
+
+$animation-duration: .25s;
+
+$form-bg: #2c385a;
+$form-color: #fff;
+$form-placeholder: #dee1ea;
+$form-border: #a0a6b3;
+$form-border-hover: #fff;
+$form-border-active: #e1e817;
+
+body {
+  font-family: $font-stack;
+}
+
+// Sections
+
+.section {
+  padding: 20px 0;
+}
+
+.section--form {
+  background-color: $form-bg;
+  color: $form-color;
+}
+
+.content {
+  margin: auto;
+  max-width: 90%;
+  width: 900px;
+}
+
+// Form
+
+.form {
+  color: $form-color;
+  display: flex;
+}
+
+.form__divider {
+  flex: 50%;
+}
+
+.form__divider--right {
+  display: flex;
+}
+
+.form__divider--right > label,
+.form__divider--right > textarea,
+.form__divider--right > button {
+  height: auto;
+}
+
+::placeholder { /* Standard syntax */
+  color: $form-placeholder;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $form-placeholder;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $form-placeholder;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $form-placeholder;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $form-placeholder;
+}
+
+.form__txt-input {
+  color: $form-color;
+  background: $form-bg;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 0 10px 0;
+  padding: 12px;
+  border: 1px solid $form-border;
+  border-bottom: 3px solid $form-border;
+  transition: $animation-duration ease-out border-color;
+}
+
+.form__txt-input:hover {
+  border: 1px solid $form-border-hover;
+  border-bottom: 3px solid $form-border-hover;
+}
+
+.form__txt-input:focus {
+  border: 1px solid $form-border-active;
+  border-bottom: 3px solid $form-border-active;
+  outline: 0;
+}
+
+.form__label {
+  transition: opacity $animation-duration ease-out, left $animation-duration ease-out;
+  display: inline;
+  opacity: 0;
+  position: relative;
+  left: 5px;
+  top: 9px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-family: $font-stack-secondary;
+  font-weight: 700;
+  background: $form-bg;
+  padding: 3px;
+}
+
+.form__label.form__label--enabled {
+  opacity: 1;
+  left: 11px;
+}
+
+.form__txt-input--txtarea {
+  resize: vertical;
+}
+
+.form__btn {
+  display: block;
+  border: 0;
+  padding: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: $font-stack-secondary;
+  font-size: .9rem;
+  margin: 26px 0;
+}
+
+.form__btn:hover {
+  cursor: pointer;
+}
+
+.form__btn:focus {
+  outline: none;
+}

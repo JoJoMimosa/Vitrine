@@ -2,38 +2,60 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <title>Vitrine - Welcome !</title>
-    <link href="https://fonts.googleapis.com/css?family=Arimo:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,800" rel="stylesheet">
   <link rel="stylesheet" href="/js.afa27f04.css"></head>
   <body>
-    <section class="section">
+    <header class="section section--header">
       <div class="content">
-        <h1>Hello !</h1>
-        <p>This is a demo</p>
+        <h1>👨‍💻 Floating label demo</h1>
+        <p>This demo implements floating labels on a form. The <a href="http://mds.is/float-label-pattern/" target="_blank">idea</a> originates from Matt D. Smith back in 2013.</p>
       </div>
-    </section>
+    </header>
     <section class="section section--form">
       <div class="content">
-        <h2>Form</h2>
-        <span>Feel free to contact us through the form below.</span>
+        <h2>Check this out</h2>
+        <span>Try typing in the fields !</span>
         <form class="form">
           <div class="form__divider">
-            <label class="form__label" for="name">Name</label>
-            <input class="form__txt-input flabel" id="name" type="text" placeholder="Name">
-            <label class="form__label" for="surname">Surname</label>
-            <input class="form__txt-input flabel" id="surname" type="text" placeholder="Surname">
-            <label class="form__label" for="email">Email</label>
-            <input class="form__txt-input flabel" id="email" type="email" placeholder="Email">
+            <div class="flabel">
+              <input class="flabel__input" type="text" placeholder="Name">
+              <label class="flabel__label">Name</label>
+            </div>
+            <div class="flabel">
+              <input class="flabel__input" type="text" placeholder="Surname">
+              <label class="flabel__label">Surname</label>
+            </div>
+            <div class="flabel">
+              <input class="flabel__input" type="email" placeholder="Email">
+              <label class="flabel__label">Email</label>
+            </div>
+            <div class="flabel">
+              <input class="flabel__input" type="tel" placeholder="Phone">
+              <label class="flabel__label">Phone</label>
+            </div>
           </div>
           <div class="form__divider form__divider--right">
-            <label class="form__label" for="message">Message</label>
-            <textarea class="form__txt-input form__txt-input--txtarea flabel" id="message" placeholder="Message"></textarea>
+            <div class="flabel">
+              <textarea class="flabel__input flabel__input--txtarea" placeholder="Message"></textarea>
+              <label class="flabel__label">Message</label>
+            </div>
             <button class="form__btn" type="button">Send form</button>
           </div>
         </form>
       </div>
     </section>
+    <footer class="section section--footer">
+      <div class="content">
+        
+      </div>
+    </footer>
     <script src="/js.afa27f04.js"></script>
   </body>
 </html>
+<!--
+
+Whatchu looking at u nerd
+
+-->

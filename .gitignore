@@ -31,7 +31,11 @@ bower_components
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
+
+# ParcelJS output directory
 dist/
+
+# ParcelJS cache
 .cache
 
 # Dependency directories

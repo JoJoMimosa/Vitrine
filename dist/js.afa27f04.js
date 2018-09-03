@@ -185,16 +185,17 @@ Object.defineProperty(exports, "__esModule", {
 // Usable tags
 var tags = ['INPUT', 'TEXTAREA'];
 
-var floatingLabel = function floatingLabel(selector) {
-  // Get all targets
-  var targets = document.querySelectorAll(selector);
+var floatingLabel = function floatingLabel() {
+  // Get the input fields
+  var inputs = document.querySelectorAll('.flabel .flabel__input');
 
+  // Handle user input on each input
   var _iteratorNormalCompletion = true;
   var _didIteratorError = false;
   var _iteratorError = undefined;
 
   try {
-    for (var _iterator = targets[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+    for (var _iterator = inputs[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
       var input = _step.value;
 
       // If the tag is usable
@@ -222,20 +223,20 @@ var floatingLabel = function floatingLabel(selector) {
 var onUserInput = function onUserInput(e) {
   // Get the input and its associated label
   var input = e.target;
-  var label = input.form.querySelector('[for=' + input.id + ']');
+  var label = input.parentElement.querySelector('.flabel__label');
 
   // If the input is not empty
   if (input.value.length != '') {
     // If the label was hidden, show it
-    if (!label.classList.contains('form__label--enabled')) {
-      label.classList.add('form__label--enabled');
+    if (!label.classList.contains('flabel__label--enabled')) {
+      label.classList.add('flabel__label--enabled');
     }
   }
   // If the input is empty
   else {
       // If the label was enabled, hide it
-      if (label.classList.contains('form__label--enabled')) {
-        label.classList.remove('form__label--enabled');
+      if (label.classList.contains('flabel__label--enabled')) {
+        label.classList.remove('flabel__label--enabled');
       }
     }
 };
@@ -258,7 +259,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 
 // Initialize floating labels
-(0, _floatingLabel2.default)('.flabel');
+(0, _floatingLabel2.default)();
 
 // JS imports
 /*! github.com/jojomimosa | MIT License */
@@ -293,7 +294,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '64251' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '50288' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 

@@ -11,4 +11,4 @@ import floatingLabel from './floating-label.js';
 
 
 // Initialize floating labels
-floatingLabel('.flabel');
+floatingLabel();

@@ -1,5 +1,3 @@
-/*! github.com/jojomimosa | MIT License */
-
 // Usable tags
 const tags = ['INPUT', 'TEXTAREA'];
 

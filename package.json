@@ -8,6 +8,7 @@
     "autoprefixer": "^9.1.3",
     "node-sass": "^4.9.3",
     "parcel-bundler": "^1.9.7",
+    "parcel-plugin-wrapper": "^0.1.1",
     "postcss-modules": "^1.3.2",
     "posthtml-minifier": "^0.1.0",
     "sqip": "^0.3.3"

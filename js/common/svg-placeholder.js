@@ -1,5 +1,3 @@
-/*! github.com/jojomimosa | MIT License */
-
 const svgPlaceholder = (selector) => {
   // Get the targeted images
   let targets = document.querySelectorAll(selector);
